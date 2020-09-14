@@ -9,11 +9,24 @@ public class Oblig1 {
 
     ///// Oppgave 1 //////////////////////////////////////
     public static int maks(int[] a) {
-        throw new UnsupportedOperationException();
+        ombyttinger(a);
+        return a[a.length-1];
+        
     }
 
+
     public static int ombyttinger(int[] a) {
-        throw new UnsupportedOperationException();
+        int counter=0;
+        for (int j = 0; j < a.length; j++){
+            if (a[j] > a[j + 1]) {
+            int temp = a[j];
+            a[j] = a[j+1];
+            a[j+1] = temp;
+            counter++;
+
+            }
+        }
+        return counter;
     }
 
     ///// Oppgave 2 //////////////////////////////////////
