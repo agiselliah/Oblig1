@@ -30,7 +30,7 @@ public class Oblig1 {
     }
 
     ///// Oppgave 2 //////////////////////////////////////
-    public static int antallUlikeSortert(int[] a){
+    public static int antallUlikeSortert(int[] a){                                                                  
         for (int i = 0; i < a.length; ++i) {
             if (a[i] > a[i + 1]) {
                 throw new IllegalStateException("Tabellen er usortert");
@@ -57,12 +57,64 @@ public class Oblig1 {
 
     ///// Oppgave 3 //////////////////////////////////////
     public static int antallUlikeUsortert(int[] a) {
-        throw new UnsupportedOperationException();
-    }
+        int antallUlike = 0;
 
+        for (int i = 0; i < a.length; i++) {
+            Boolean add = true;
+            for (int j = i+1; j < a.length; j++) {
+                if (a[i] == a[j]) {
+                    add = false;
+                    break;
+                }
+            }
+            if (add) {
+                System.out.println(a[i]);
+                antallUlike++;
+
+            }return antallUlike;
+
+        }
+
+
+public static int partisjoner(int a[], int min, int max){
+            int pivot = a[max];
+            int i = (min-1);
+
+            for (int j = min; j < max; j++) {
+                if (a[j] < pivot) {
+                    i++;
+
+                    int temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+
+
+                }
+            }
+            int temp = a[i+1];
+            a[i+1] = a[max];
+            a[max] = temp;
+
+            return i+1;
+
+        }
+
+        public static void sorter(int a[], int min, int max){
+            if (min < max) {
+                int partisjon = partisjoner(a, min, max );
+                sorter(a, min, max partisjon-1)  ;
+                sorter(a, min partisjon+1, max);
+                
+            }
+        }
     ///// Oppgave 4 //////////////////////////////////////
-    public static void delsortering(int[] a) {
-        throw new UnsupportedOperationException();
+    public static List<Integer> delsortering(int[] a) {
+            sorter(a, min: 0, max:a.length-1);
+           
+            List<Integer> oddetall
+            
+        }
+
     }
 
     ///// Oppgave 5 //////////////////////////////////////
@@ -70,10 +122,10 @@ public class Oblig1 {
         throw new UnsupportedOperationException();
     }
 
-    ///// Oppgave 6 //////////////////////////////////////
-    public static void rotasjon(char[] a, int k) {
-        throw new UnsupportedOperationException();
-    }
+
+
+
+
 
     ///// Oppgave 7 //////////////////////////////////////
     /// 7a)
@@ -86,23 +138,23 @@ public class Oblig1 {
         throw new UnsupportedOperationException();
     }
 
-    ///// Oppgave 8 //////////////////////////////////////
-    public static int[] indekssortering(int[] a) {
-        throw new UnsupportedOperationException();
-    }
 
-    ///// Oppgave 9 //////////////////////////////////////
-    public static int[] tredjeMin(int[] a) {
-        throw new UnsupportedOperationException();
-    }
 
-    ///// Oppgave 10 //////////////////////////////////////
-    public static int bokstavNr(char bokstav) {
-        throw new UnsupportedOperationException();
-    }
 
-    public static boolean inneholdt(String a, String b) {
-        throw new UnsupportedOperationException();
-    }
 
-}  // Oblig1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
