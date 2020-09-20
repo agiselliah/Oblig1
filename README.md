@@ -7,5 +7,6 @@ Oppgaven er levert av følgende studenter:
 
 # Arbeidsfordeling
 
-Jobbet alene.  
+Levert senere pga personlige årsaker. Tatt kontakt med lærer. Jobbet alene, da jeg ikke har vært her for å samarbeide med min egentlige partner.
+
 
