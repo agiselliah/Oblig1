@@ -187,7 +187,7 @@ public class Oblig1 {
         }
         return resultat;
     }
-
+}
 
 
 
